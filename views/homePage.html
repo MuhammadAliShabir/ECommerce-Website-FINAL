@@ -1,0 +1,131 @@
+                                          <!--Home Page-->
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TIENDA HomePage</title>
+        <link rel="stylesheet" href="cssFiles/homePage.css">
+        <!-- <link rel="stylesheet" href="/public/cssFiles/homePage_sec.css"> -->
+        <script src="JS_files/page1.js" defer> </script>
+        
+        </head>
+
+        <body>
+        <div class="title">𝒯𝒾𝑒𝓃𝒹𝒶 </div>
+            <article class="search-bar">
+            <input type="text" placeholder="𝐒𝐞𝐚𝐫𝐜𝐡 𝐟𝐨𝐫 𝐩𝐫𝐨𝐝𝐮𝐜𝐭𝐬">
+            <img src="images/search.png" alt="Search" onclick="performSearch()" width="46" height="47">
+            <button class="signup-btn" onclick="askUserType()">Sign In</button>   
+            </article>
+
+        <div class="line"></div>
+        <div class="banner">
+            <p>Savor Style, Shop with Passion </p>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">☰ Categories</button>
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="#">Category 1</a>
+                <a href="#">Category 2</a>
+                <a href="#">Category 3</a>
+            </div>
+        </div>
+
+            <div id="userTypeModal" class="modal">  
+                <div class="modal-content">
+                    <p>Are you a buyer or a seller?</p>
+                    <button onclick='getLoginPage("buyer")'>Buyer</button>
+                    <button onclick='getLoginPage("seller")'>Seller</button>
+                </div>
+            </div>
+            <a href="joggers-page.html" id="joggers-link">
+                <img src="images/joggers.jpg" id="joggers-img" alt="Joggers">
+                <span id="joggers-text">Shoes for Everyone</span>
+            </a>
+
+            <a href="pants-page.html" id="pants-link">
+                <img src="images/pants.jpg" id="pants-img" alt="Pants">
+                <span id="pants-text">Accessories</span>
+            </a>
+
+
+            <a href="equip-page.html" id="equip-link">
+                <img src="images/equip.jpg" id="equip-img" alt="Equipment">
+                <span id="equip-text">Equipment</span>
+
+            </a>
+
+        <a href="/sports-page" id="sports-link">
+            <img src="images/sports.jpg" id="sports-img" alt="Sports">
+            <span id="sports-text">Sports</span>
+        </a>
+
+            <a href="protein-page.html" id="protein-link">
+            <img src="images/protein.jpg" id="protein-img" alt="Protein">
+            <span id="protein-text">Health</span>
+            </a>
+
+            <div id="popular-items-text">Shop For Our Popular Products</div>
+
+            <a href="protein2-page.html" id="protein2-link">
+                <img src="images/protein2.jpg" id="protein2-img" alt="Protein2">
+                <span id="protein2-text">Protein</span>
+            </a>
+
+            <a href="dumbbles-page.html" id="dumbbles-link">
+                <img src="images/dumbbles.jpg" id="dumbbles-img" alt="Dumbbles">
+                <span id="dumbbles-text">Dumbbells</span>
+            </a>
+
+            <a href="mats-page.html" id="mats-link">
+                <img src="images/mats.jpg" id="mats-img" alt="Mats">
+                <span id="mats-text">Mats</span>
+            </a>
+
+            <a href="diet-page.html" id="diet-link">
+                <img src="images/diet.jpg" id="diet-img" alt="diet">
+                <span id="diet-text">Diet Plans</span>
+            </a>
+
+            <div class="info-block">
+            </div>
+            <div class="info2">
+            </div>
+            <div class="info3">
+            </div>
+            <div class="info4">
+            </div>
+
+            <div class="footer">
+                <div class="footer-text">
+                    <p>© 2023 Tienda. All rights reserved.</p>
+                </div>
+                
+                <p id="my-text">Tienda is a global online marketplace, where people come together to make, sell, buy and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet.</p>
+    <p id="line1">A Community Doing Good</p>
+    <p id="line2">What is Tienda?</p>
+    <p id="line3">Support independent Creators</p>
+    <p id="line4">There’s no Tienda warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.</p>
+    <p id="line5">Peace of mind</p>
+    <p id="line6">Your privacy is the highest priority of our dedicated team. And if you ever need assistance, we are always ready to step in for support.</p>
+    <p id="line7">Have a question? Well, we’ve got some answers.</p>
+    <button id="help-button">Go to help center</button>
+    <p id="line8">Yes! Send me exclusive offers, unique gift ideas, and personalised tips for shopping and selling on Tienda.</p>
+    <div id="subscribe-section">
+        <input type="email" id="email-input" placeholder="Enter your email">
+        <button id="subscribe-button">Subscribe</button>
+    </div>
+    <p id="line9">Tienda is powered by 100% renewable electricity.</p>
+    <div id="container">
+        <div id="line10">
+            Tienda
+        </div>
+        <button id="hover-button">Download the Tienda App</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer ></script>
+    </body>
+
+    </html>                         

@@ -1,0 +1,1006 @@
+    .title {
+        position: absolute;
+        top: 8px;
+        left: 70px;
+        margin: 20px;
+        font-size: 35px;
+        color: darkorange;
+        font-weight: bold;
+        letter-spacing: -3px;
+    }
+
+    .search-bar {
+        position: absolute;
+        top: 20px;
+        left: 360px;
+        display: flex;
+        align-items: center;
+        border-radius: 50px;
+        border: 2px solid black;
+        width: 800px;
+        height: 45px;
+        padding-left: 35px;
+        background-repeat: no-repeat;
+        background-size: 10px 10px;
+        background-position: 10px;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .search-bar input {
+        flex: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    .search-bar .icon {
+        margin-right: 50px;
+    }
+
+    .line {
+        position: absolute;
+        top: 120px;
+        left: 0px;
+        width: 1500px;
+        height: 2px;
+        background-color: lightgray;
+    }
+
+    .banner {
+        position: absolute;
+        top: 113px;
+        left: 0;
+        width: 100%;
+        height: 169px;
+        background-color: rgb(183, 155, 187);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: #f9f8da;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 38px;
+        left: 235px;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 200px;
+        min-height: 130px;  
+        z-index: 1;
+    
+        left: 50%; /* This will move the left edge of the dropdown content to the center of the dropdown button */
+        top: 30px; /* This will move the dropdown content 30px down from the top edge of the dropdown button */
+        transform: translateX(-31%); /* This will pull the dropdown content back to the left by half of its width */
+        border-radius: 15px; /* This will make the corners rounded */
+        background-color: #fdfafafd; /* This will change the background color of the dropdown */
+        box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.9); /* This will add a darker and larger shadow to the dropdown */
+
+        padding: 12px 30px; /* This will add some padding inside the dropdown */
+    }
+
+
+    .dropdown-content::before {
+        content: '';
+        position: absolute;
+        top: -11px;
+        left: 27px;
+        transform: translateX(-50%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid white
+    }
+
+
+    .dropdown-content a {
+        color: rgb(79, 67, 67);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgb(212, 206, 206); /* This will change the background color to light grey when you hover over a category */
+    }
+
+    .dropdown-content.show {
+        display: block;
+    }
+
+
+    .dropbtn {
+        background-color: inherit; /* This will make the button have the same background color as your webpage */
+        font-family: "Times New Roman", Times, serif; /* This will change the font to Times New Roman */
+        border: none; /* This will remove the border */
+        font-size: 17px;
+        padding: 12px 18px; /* This will add the same padding as in the hover state */
+        margin: -12px -18px; /* This will offset the added padding */
+        transition: background-color 0.2s , padding 0.2 ease; /* This will create a smooth transition effect */
+
+    }
+        
+    .dropbtn:hover {
+            border-radius: 60px; /* This will make the corners rounded */
+            background-color: rgb(238, 234, 234);
+            border-style:hidden; 
+            padding: 12px 18px;
+            transform: scale(1.1); /* This will make the button grow slightly when you hover over it */
+        
+        }
+
+        .dropbtn:focus {
+            background-color: inherit; /* This will make the button have the same background color as your webpage */
+            font-family: "Times New Roman", Times, serif; /* This will change the font to Times New Roman */
+            border: none; /* This will remove the border */
+            font-size: 17px;
+            padding: 12px 18px; /* This will add the same padding as in the hover state */
+            margin: -12px -18px; /* This will offset the added padding */
+            transform: scale(1); /* This will return the button to its original size */
+        }
+        
+        .dropbtn:focus:hover {
+            transform: scale(1); /* This will prevent the button from growing when you hover over it while the dropdown menu is open */
+        }
+
+
+        .signup-btn {
+            position: absolute;
+            right: 0;
+            padding: 10px 20px;
+            margin: -115px;
+            background-color: white; /* Change as desired */
+            color: rgb(8, 8, 8); /* Change as desired */
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 15px;
+            transition: background-color 0.2s;
+            
+
+        }
+        
+        .signup-btn:hover {
+            background-color: #a8b4a8; /* Change as desired */
+        }
+
+    
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        
+        .modal-content {
+            background: linear-gradient(to right, #bebefa 0%, #ac56cb 100%);
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        .modal-content p {
+            margin-bottom: 20px;
+        }
+        
+        .modal-content button {
+            background-color: #FFA07A;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .modal-content button:hover {
+            background-color: #cf69c0d3;
+            color: black;
+        }
+
+        #joggers-link {
+            display: block;
+            width: 160px; /* Adjust as needed */
+            height: 160px; /* Adjust as needed */
+            margin: 0 auto; /* Centers the block horizontally */
+            position: relative;
+            left: -510px; /* Adjust as needed to move the image to the left */
+            top: 239px; /* Adjust as needed to move the image down */
+            text-decoration: none; /* Removes the default underline from the link */
+
+        }
+
+        
+        #joggers-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        object-position: top;
+            object-position: right; /* Shifts the image to the left within the circle */
+            border-radius: 50%; /* Makes the image circular */
+            transition: transform 0.3s ease; /* Adds a smooth transition effect */
+        }
+        
+        #joggers-link:hover #joggers-img {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow when hovered */
+
+            transform: scale(1.1); /* Scales the image up when hovered */
+        }
+
+        #joggers-text {
+            display: block;
+            text-align: center;
+            margin-top: 6px; /* Adjust as needed */
+            color: black; /* Sets the text color to black */
+            font-family: 'Calibri', sans-serif; /* Sets the font to Calibri */
+            text-decoration: none; /* Ensures that the text does not have an underline by default */
+            font-size: 20px;
+
+            border-bottom: 1px solid transparent; /* Sets an invisible border */
+            transition: border-bottom 0.3s ease; /* Adds a smooth transition effect */      
+            transition: text-decoration 0.3s ease; /* Adds a smooth transition effect */
+        }
+        
+        #joggers-link:hover #joggers-text {
+
+            text-decoration: underline; /* Adds an underline when hovered */
+        }
+
+
+
+
+
+
+    /************************************************/
+
+
+    #pants-link {
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+        position: relative;
+        left: -240px;
+        top: 79px;
+        text-decoration: none;
+    }
+
+    #pants-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        object-position: right;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    #pants-link:hover #pants-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+    }
+
+    #pants-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px;
+        color: black !important;
+        font-family: 'Calibri', sans-serif !important;
+        text-decoration: none;
+        font-size: 21px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease;
+    }
+
+    #pants-link:hover #pants-text {
+        text-decoration: underline !important;
+    }
+
+
+
+    #equip-link {
+        display: block;
+        width: 160px; /* Adjust as needed */
+        height: 160px; /* Adjust as needed */
+        margin: 0 auto; /* Centers the block horizontally */
+        position: relative;
+        left: 19px; /* Adjust as needed to move the image to the left */
+        top: -79px; /* Adjust as needed to move the image down */
+        text-decoration: none; /* Removes the default underline from the link */
+    }
+
+    #equip-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left; /* Shifts the image to the left within the circle */
+        border-radius: 50%; /* Makes the image circular */
+        transition: transform 0.3s ease; /* Adds a smooth transition effect */
+    }
+
+    #equip-link:hover #equip-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow when hovered */
+        transform: scale(1.1); /* Scales the image up when hovered */
+    }
+
+    #equip-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px; /* Adjust as needed */
+        color: black; /* Sets the text color to black */
+        font-family: 'Calibri', sans-serif; /* Sets the font to Calibri */
+        text-decoration: none; /* Ensures that the text does not have an underline by default */
+        font-size: 20px;
+        border-bottom: 1px solid transparent; /* Sets an invisible border */
+        transition: border-bottom 0.3s ease; /* Adds a smooth transition effect */
+        transition: text-decoration 0.3s ease; /* Adds a smooth transition effect */
+    }
+
+    #equip-link:hover #equip-text {
+        text-decoration: underline; /* Adds an underline when hovered */
+    }
+
+
+
+    #sports-link {
+        display: block;
+        width: 160px; /* Adjust as needed */
+        height: 160px; /* Adjust as needed */
+        margin: 0 auto; /* Centers the block horizontally */
+        position: relative;
+        left: 274px; /* Adjust as needed to move the image to the left */
+        top: -239px; /* Adjust as needed to move the image down */
+        text-decoration: none; /* Removes the default underline from the link */
+    }
+
+    #sports-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left; /* Shifts the image to the left within the circle */
+        border-radius: 50%; /* Makes the image circular */
+        transition: transform 0.3s ease; /* Adds a smooth transition effect */
+    }
+
+    #sports-link:hover #sports-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow when hovered */
+        transform: scale(1.1); /* Scales the image up when hovered */
+    }
+
+    #sports-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px; /* Adjust as needed */
+        color: black; /* Sets the text color to black */
+        font-family: 'Calibri', sans-serif; /* Sets the font to Calibri */
+        text-decoration: none; /* Ensures that the text does not have an underline by default */
+        font-size: 20px;
+        border-bottom: 1px solid transparent; /* Sets an invisible border */
+        transition: border-bottom 0.3s ease; /* Adds a smooth transition effect */
+        transition: text-decoration 0.3s ease; /* Adds a smooth transition effect */
+    }
+
+    #sports-link:hover #sports-text {
+        text-decoration: underline; /* Adds an underline when hovered */
+    }
+
+    #protein-link {
+        display: block;
+        width: 160px; /* Adjust as needed */
+        height: 160px; /* Adjust as needed */
+        margin: 0 auto; /* Centers the block horizontally */
+        position: relative;
+        left: 520px; /* Adjust as needed to move the image to the left */
+        top: -399px; /* Adjust as needed to move the image down */
+        text-decoration: none; /* Removes the default underline from the link */
+    }
+    
+    #protein-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left; /* Shifts the image to the left within the circle */
+        border-radius: 50%; /* Makes the image circular */
+        transition: transform 0.3s ease; /* Adds a smooth transition effect */
+    }
+    
+    #protein-link:hover #protein-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow when hovered */
+        transform: scale(1.1); /* Scales the image up when hovered */
+    }
+    
+    #protein-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px; /* Adjust as needed */
+        color: black; /* Sets the text color to black */
+        font-family: 'Calibri', sans-serif; /* Sets the font to Calibri */
+        text-decoration: none; /* Ensures that the text does not have an underline by default */
+        font-size: 20px;
+        border-bottom: 1px solid transparent; /* Sets an invisible border */
+        transition: border-bottom 0.3s ease; /* Adds a smooth transition effect */
+        transition: text-decoration 0.3s ease; /* Adds a smooth transition effect */
+    }
+    
+    #protein-link:hover #protein-text {
+        text-decoration: underline; /* Adds an underline when hovered */
+    }
+
+
+    #popular-items-text {
+        position: absolute;
+        left: 75px;
+        bottom: 130px;
+        font: 30px 'Calibri', sans-serif;
+        font-weight: 850;
+        color: black;
+        
+
+    }
+
+
+    #protein2-container {
+        width: 100px; /* Adjust this to the desired width */
+        height: 100px; /* Adjust this to the desired height */
+        position: relative;
+    }
+    
+    #protein2-link {
+        display: block;
+        width: 100px;
+        height: 100px;
+    margin-left: 150px;
+        text-decoration: none;
+    }
+    
+    #protein2-img {
+        width: 280px;
+        height: 290px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+        border-radius: 25px;
+        position: relative;
+        left: -40px;
+        top: -160px;
+    }
+    
+    #protein2-link:hover #protein2-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.01);
+    }
+    
+    #protein2-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px;
+        color: black;
+        font-family: 'Calibri', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease, text-decoration 0.3s ease;
+        position: relative;
+        left: -43px;
+        top: -200px;
+        background-color: white;
+
+        width: 285px;
+        padding: 4px 5px;
+        border-bottom: 1px lightgray solid;
+        border-left: -1px solid transparent;
+        border-right: -1px solid transparent;
+        
+        border-radius: 0 0 17px 17px;
+    
+    }
+
+
+
+    #dumbbles-container {
+        width: 100px; /* Adjust this to the desired width */
+        height: 100px; /* Adjust this to the desired height */
+        position: relative;
+    }
+    
+    #dumbbles-link {
+        display: block;
+        width: 100px;
+        height: 100px;
+        text-decoration: none;
+        margin-left: 500px;
+        margin-top: -120px
+    }
+    
+    #dumbbles-img {
+        width: 280px;
+        height: 290px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+        border-radius: 25px;
+        position: relative;
+        left: -30px;
+        top: -145px;
+    }
+    
+    #dumbbles-link:hover #dumbbles-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.01);
+    }
+    
+    #dumbbles-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px;
+        color: black;
+        font-family: 'Calibri', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease, text-decoration 0.3s ease;
+        position: relative;
+        left: -32px;
+        top: -180px;
+        background-color: white;
+        width: 285px;
+        padding: 4px 5px;
+        border-bottom: 1px lightgray solid;
+        border-left: -1px solid transparent;
+        border-right: -1px solid transparent;
+        border-radius: 0 0 17px 17px;
+    }
+
+
+
+
+    #mats-container {
+        width: 100px; /* Adjust this to the desired width */
+        height: 100px; /* Adjust this to the desired height */
+        position: relative;
+    }
+    
+    #mats-link {
+        display: block;
+        width: 100px;
+        height: 100px;
+        text-decoration: none;
+        margin-left: 850px;
+        margin-top: -120px;
+    }
+    
+    #mats-img {
+        width: 280px;
+        height: 290px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+        border-radius: 25px;
+        position: relative;
+        left: -25px;
+        top: -130px;
+    }
+    
+    #mats-link:hover #mats-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.01);
+    }
+    
+    #mats-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px;
+        color: black;
+        font-family: 'Calibri', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease, text-decoration 0.3s ease;
+        position: relative;
+        left: -27px;
+        top: -160px;
+        background-color: white;
+        width: 285px;
+        padding: 4px 5px;
+        border-bottom: 1px lightgray solid;
+        border-left: -1px solid transparent;
+        border-right: -1px solid transparent;
+        border-radius: 0 0 17px 17px;
+    }
+
+    
+   
+    #diet-link {
+        display: block;
+        width: 100px;
+        height: 100px;
+        text-decoration: none;
+        margin-left: 1200px;
+        margin-top: -120px;
+    }
+    
+    #diet-img {
+        width: 280px;
+        height: 290px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+        border-radius: 25px;
+        position: relative;
+        left: -20px;
+        top: -110px;
+    }
+    
+    #diet-link:hover #diet-img {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        transform: scale(1.01);
+    }
+    
+    #diet-text {
+        display: block;
+        text-align: center;
+        margin-top: 6px;
+        color: black;
+        font-family: 'Calibri', sans-serif;
+        text-decoration: none;
+        font-size: 20px;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.3s ease, text-decoration 0.3s ease;
+        position: relative;
+        left: -22px;
+        top: -140px;
+        background-color: white;
+        width: 285px;
+        padding: 4px 5px;
+        border-bottom: 1px lightgray solid;
+        border-left: -1px solid transparent;
+        border-right: -1px solid transparent;
+        border-radius: 0 0 17px 17px;
+    }
+
+
+    .info-block {
+         /* Light yellow background */
+        background-color: #f9f8da; /* Light gray background */
+        color: #333333; /* Dark gray text */
+        padding: 240px; /* 20 pixels of padding on all sides */
+        margin: 235px 0; /* 20 pixels of vertical margin */
+    }
+
+
+    .info2 {
+        background-color: rgb(175, 227, 243); /* Light gray background */
+        color: #333333; /* Dark gray text */
+        padding: 90px; /* 20 pixels of padding on all sides */
+        margin: -240px 0; /* 20 pixels of vertical margin */
+    }
+
+    .info3 {
+        background-color: rgb(94, 127, 205); /* Light gray background */
+        color: #333333; /* Dark gray text */
+        padding: 50px; /* 20 pixels of padding on all sides */
+        margin: 230px 0; /* 20 pixels of vertical margin */
+    }
+
+
+    .info4 {
+        background-color: rgb(49, 84, 160); /* Light gray background */
+        color: #333333; /* Dark gray text */
+        padding: 190px; /* 20 pixels of padding on all sides */
+        margin: -230px 0; /* 20 pixels of vertical margin */
+        height: 290px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: -1493px;
+        width: 1523px;
+        height: 60px;
+        background-color: rgb(183, 155, 187);
+        color: white;
+        text-align: center;
+        font-family: 'Calibri', sans-serif;
+        font-size: 20px;
+        padding-top: 20px;
+    }
+
+ 
+
+    #my-text {
+        position: absolute;
+        top: -910px;
+        left: 90px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+    
+    
+    }
+
+    #line1 {    
+        position: absolute;
+        top: -980px;
+        left: 90px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+        font-size: 30px;
+        font-weight: 570;
+    
+    
+    }
+
+    #line2 {    
+        position: absolute;
+        top: -1070px;
+        left: 550px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+        font-size: 50px;
+        font-weight: 40 0;
+    
+    
+    }
+
+
+
+    #line3 {    
+        position: absolute;
+        top: -980px;
+        left: 550px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+        font-size: 30px;
+        font-weight: 570;
+    
+    
+    }
+
+
+
+
+    #line4
+    {
+
+
+        position: absolute;
+        top: -900px;
+        left: 550px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+    }
+
+    #line5 {    
+        position: absolute;
+        top: -980px;
+        left: 1010px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+        font-size: 30px;
+        font-weight: 570;
+    
+    
+    }
+ 
+    #line6
+    {
+
+
+        position: absolute;
+        top: -900px;
+        left: 1010px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+    
+    
+    }
+    
+
+    #line7
+    {
+
+
+        position: absolute;
+        top: -720px;
+        left: 550px;
+        color: black;
+        text-align: left;
+        width: 400px;   
+        font-family: 'Calibri', sans-serif;
+            line-height: 1.5;
+    
+    
+    }
+
+    #help-button {
+        position: absolute;
+        top: -685px; /* Adjust this to position the button on the screen */
+        left: 640px; /* same as the left value of #line7 */
+        background-color: transparent !important; /* Green */
+        border: 2px solid black; /* Add a black border */
+        border-radius: 50px; /* Make the border round */
+        color: rgb(4, 4, 4);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+        
+    #help-button:hover {
+        background-color: #45a049;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5); /* Add a shadow when hovered over */
+
+    }
+
+
+    
+    #line8
+    {
+
+
+        position: absolute;
+        top: -550px;
+        left: 350px;
+        color: black;
+        text-align: left;
+        width: 1000px;   
+        font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+    
+    
+    }
+
+
+    #subscribe-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    
+    #email-input {
+        position: absolute;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 50px; /* Make the left border round */
+        border-top-right-radius: 0; /* Make the top right border straight */
+        border-bottom-right-radius: 0; /* Make the bottom right border straight */
+        border: 2px solid black;
+        border-right: 2px solid transparent; /* Make the right border transparent */
+        top: -490px;
+        left: 574px;
+    }
+    
+    #subscribe-button {
+        position: absolute;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 50px; /* Make the right border round */
+        border-top-left-radius: 0; /* Make the top left border straight */
+        border-bottom-left-radius: 0; /* Make the bottom left border straight */
+        border: 2px solid black;
+        border-left: 2px solid transparent; /* Make the left border transparent */
+        background-color: white;  
+        color: rgb(9, 9, 9);
+        cursor: pointer;
+        transition-duration: 0.4s;
+        top: -490px;
+        left: 790px;
+    }
+    
+    #subscribe-button:hover {
+        background-color: black;
+        color: white;
+
+    }
+    
+    #subscribe-button:active {
+        background-color: black;
+    }
+
+    #subscribe-button.active, #subscribe-button:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #line9 {
+        position: absolute;
+        top: -400px; /* Adjust this value as needed */
+        left: 440px;
+        width: 600px;
+        height: 2px;
+        color: rgb(7, 7, 7); /* Set the text color to white */
+        text-decoration: underline dotted;
+        
+    }
+
+    #line10 {
+        position: absolute;
+        top: -370px; /* Adjust this value as needed */
+        left: 670px;
+        width: 130px; /* Set width and height to the same value */
+        height: 130px; /* Set width and height to the same value */
+        color: rgb(253, 251, 251); /* Set the text color to white */
+        background: orange url('../images/shopping.jpg') no-repeat    ; /* Set the background color to orange and add the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        border-radius: 15px; /* Half of width and height to make it a circle */
+        background-position: 30% left;
+       
+    }
+
+
+    #container {
+        position: relative;
+    }
+    
+
+    #hover-button {
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        margin: 20px auto;
+        background-color: rgb(92, 92, 198);
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        bottom: 150px;
+        left: 635px;
+        border-radius: 25px; /* Add this line to make the button a bit round */
+        border: 2px solid white; /* Add this line to make the border white */
+        width: 200px; /* Add this line to set the width of the button */
+        font: 17px 'Calibri', sans-serif; /* Add this line to set the font of the button */
+    }
+    
+    #hover-button:hover {
+        background-color: rgb(92, 92, 198);
+        box-shadow: 0px 8px 16px 0px rgba(0.8,0.8,0.8,0.8); /* Add this line to add a shadow when hovering */
+    }
+   

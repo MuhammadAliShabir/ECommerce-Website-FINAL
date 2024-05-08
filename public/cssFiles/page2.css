@@ -1,0 +1,228 @@
+
+/* Style the h1 element */
+h1 {
+    color: #333; /* Text color */
+    font-size: 36px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-align: center; /* Center align text */
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+}
+
+.miscPara1{
+    color: #333; /* Text color */
+    text-align: center; /* Center align text */
+    margin-top: 10px; /* Minimum upper margin */
+    margin-bottom: 10px; /* Minimum lower margin */
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.intro {
+    background-color: #7cac99;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.buttonNextPage {
+    position: absolute;
+    top: 10px;
+    left: 1350px;
+    background-color: lightseagreen;
+    border: none;
+    color: aliceblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Rounded borders */
+    transition-duration: 0.4s;
+}
+
+.buttonNextPage:hover {
+    background-color: #889eb4; /* Darker blue */
+    color: white; 
+}
+
+
+.dashboard-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-buttons button {
+    background-color: #078320;
+    color: rgb(26, 170, 231);
+    border: none;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.dashboard-buttons button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.dashboard-buttons button:hover {
+    transform: scale(1.1); /* Makes the button 10% larger when hovered over */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Adds a shadow when hovered over */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+.product-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.product-table h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.product-table tr:hover {
+    background-color: #ddd;
+}
+
+.chart-text {
+    text-align: center; /* align text to the left */
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font: bold;
+    font-weight: 300;
+}
+
+
+
+#pending-orders,
+#dispatched-orders {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#pending-orders h2,
+#dispatched-orders h2,
+#sale-reports h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#pending-orders table,
+#dispatched-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#pending-orders th, #pending-orders td,
+#dispatched-orders th, #dispatched-orders td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#pending-orders th,
+#dispatched-orders th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#pending-orders tr:nth-child(even),
+#dispatched-orders tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#pending-orders tr:hover,
+#dispatched-orders tr:hover {
+    background-color: #ddd;
+}
+
+/* Center the chart container */
+#onSaleItems-reports {
+    max-width: 600px; /* Limit the maximum width */
+    margin: 50px auto; /* Center horizontally */
+}
+
+/* Reduce the size of the chart */
+canvas#priceChart {
+    width: 100%; /* Take full width of the container */
+    height: 400px; /* Adjust height as needed */
+}
+
+#priceChart.chart-text {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+/* Center the sale reports container and add upper spacing */
+#sale-reports {
+    max-width: 500px; /* Limit the maximum width */
+    margin: 50px auto 0; /* Center horizontally and add 50px spacing above */
+}
+
+/* Reduce the size of the chart */
+canvas#sales-chart {
+    width: 100%; /* Take full width of the container */
+    height: 100px; /* Adjust height as needed */
+}
+
+/* Center the chart text */
+#sale-reports.chart-text {
+    text-align: center;
+}
+
+
+
+/* Style the footer container */
+.footer {
+    background-color: #d3f0d1; /* Baby green background color */
+    padding: 20px 0; /* Add padding top and bottom */
+    text-align: center; /* Center align text */
+}
+
+/* Style the footer text */
+.footer-text p {
+    margin: 0; /* Remove default margin */
+    color: #4c5257eb; /* Gray text color */
+    font-size: 14px; /* Font size */
+    font-weight: bold; /* Make text bold */
+}
+

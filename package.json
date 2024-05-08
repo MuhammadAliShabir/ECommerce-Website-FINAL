@@ -1,0 +1,15 @@
+{
+  "name": "functional_e-commerce_site",
+  "version": "1.0.0",
+  "description": "This is intialized as per MVC architecture ",
+  "main": "driver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ali",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}

@@ -1,0 +1,53 @@
+                                   <!-- Sign IN Page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Login</title>
+</head>
+<link rel="stylesheet" href="cssFiles/signincss.css">
+<body>
+  <script src="JS_files/signin.js" defer></script>
+  <div class="box">
+    <form action="/userLogin" method="POST" id="loginForm" class='form'>
+      <h1 class="form-title">Sign In</h1>
+
+      <div class="form-group">
+        <input type="text" class="form-control"  id="email" required autofocus>
+        <label for="" class="form-label">Email</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" class="form-control" required  id="txtPassword">
+        <label for="" class="form-label">Enter Your Password</label>
+      </div>
+      <div class="form-group">
+        <label class="showLabel">
+          <input type="checkbox" id="show"> 
+          Show Password
+      </label>
+    </div>
+
+    <div class="form-group">
+    <label>
+      Are you a:
+      <input type="radio" name="userType" value="seller" required checked> Seller
+      <input type="radio" name="userType" value="buyer" required > Buyer
+    </label>
+  </div>
+
+    <div class="bottom-box">
+      <a href="#">Forget password ?</a>
+      <button type="submit" class="form-button">Submit</button>
+    </div>   
+  </div>
+ 
+</form>
+
+    <img src="logo.jpeg" alt="Logo " class="logo">
+
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+                                   <!-- Shopping Cart-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Cart</title>
+    <!--- Add your CSS stylesheet link here -->
+    <link rel="stylesheet" href="cssFiles/page5.css">
+     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script> -->
+     <script src="JS_files/page5.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/teinda.png" alt=" Website Logo"> <!-- insert Tienda logo here bro which you have-->
+        </div>
+    </header> 
+<main>
+
+<section id="cart">
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    
+    <section id="cart-products">
+        <ul class="product-list">
+            <li class="product">
+              <h2>Product 1</h2>
+              <p>Description of Product 1</p>
+              <p>Product Category:</p>
+              <p>Price: $19.99</p>
+              <p>Discount: $0.00</p>
+              <p>Final Amount: $19.99</p>
+              <button data-price="19.99">Confirm for purchase</button>
+            </li>
+          
+            <li class="product">
+              <h2>Product 2</h2>
+              <p>Description of Product 2</p>
+              <p>Product Category:</p>
+              <p>Price: $24.99</p>
+              <p>Discount: $0.00</p>
+              <p>Final Amount: $24.99</p>
+              <button data-price="24.99">Confirm for purchase</button>
+            </li>
+          
+            <li class="product">
+              <h2>Product 3</h2>
+              <p>Description of Product 3</p>
+              <p>Product Category:</p>
+              <p>Price: $29.99</p>
+              <p>Discount: $0.00</p>
+              <p>Final Amount: $29.99</p>
+              <button data-price="29.99">Confirm for purchase</button>
+            </li>
+          </ul>
+          
+    </section>
+</main>
+    <div id="cart-actions">
+      <button id="clear-cart-button">Clear Cart</button>   <!-- will use this to reload items pages-->
+      <button id="update-cart-button">Update Cart</button> <!-- will use this to go back to item selection-->
+    </div>
+    <div id="cart-total">
+        <h3>Purchase Total:</h3>
+        <span id="total-price">$0.00</span>
+        <p id="product-count">Products finalized for purchase: 0</p>
+      </div>
+    <div id="toCheckout">
+      <button id="checkout-button">Proceed to Checkout</button>
+    </div>
+  </section>
+</body>
+
+
+<footer> 
+    <hr>    
+<div class="footer">
+    <div class="footer-text">
+        <p>© 2024 Tienda. All rights reserved.</p>
+    </div>
+</footer>
+</html>

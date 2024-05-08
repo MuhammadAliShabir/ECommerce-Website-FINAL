@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #343a40;
+    --secondary-color: #f8f9fa;
+}
+
+h1 {
+    text-align: center; /* Center the text */
+    color: #a0804d; /* Change the text color */
+    font-family: Arial, sans-serif; /* Change the font */
+    padding: 20px; /* Add some padding */
+    border-bottom: 2px solid #a0804d; /* Add a bottom border */
+    font-size: 2.5em; /* Change the font size */
+    margin-top: -40px;
+}
+
+h2 {
+    text-align: center; /* Center the text */
+    color: #a0804d; /* Change the text color */
+    font-family: Arial, sans-serif; /* Change the font */
+    padding: 20px; /* Add some padding */
+    border-bottom: 2px solid #a0804d; /* Add a bottom border */
+    font-size: 2.5em; /* Change the font size */
+}
+
+
+.centralizePara{
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.product {
+    width: calc(33.33% - 20px);
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+    padding: 80px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    background-color: transparent; /* This will make the background of the image container transparent */
+    width: 100%; /* This will make the image take the full width of its container */
+    height: 200px; /* Set a fixed height */
+    object-fit: contain; /* This will ensure that the entire image is visible within its container */
+    display: block; /* This will make the image a block element */
+    margin: 0 auto; /* This will center the image */
+    transition: all 0.1s ease-in-out;
+    border: 10px solid var(--secondary-color);
+}
+
+.product img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 10px solid var(--primary-color);
+}
+
+.product a {
+    text-decoration: none; /* This will remove the underline from the link */
+}
+
+.product button {
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    border: none; /* This will remove the default button border */
+    padding: 10px 20px; /* This will add some padding to the button */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer; /* This will change the cursor to a hand when hovering over the button */
+}
+
+.product button:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#equipment-heading {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+#cartBtn {
+    position: fixed; /* This will position the button relative to the viewport */
+    top: 10px; /* This will position the button 10px from the top of the viewport */
+    right: 10px; /* This will position the button 10px from the right of the viewport */
+    border: none; /* This will remove the default button border */
+    background: none; /* This will remove the default button background */
+    padding: 0; /* This will remove the default button padding */
+    text-align: center;
+}
+
+#cartBtn img {
+    width: 70px; 
+    height: 70px;
+    cursor: pointer; /* This will change the cursor to a hand when hovering over the image */
+
+}
+
+#cart-symb-text {
+    display: block; /* Make the span a block-level element */
+    font-size: 18px; /* Adjust the font size of the text */
+    color:#a0804d;
+    font-style: italic;
+}
+
+#cart-link {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+#cart-link:visited {
+    text-decoration: none; /* Remove underline from visited links */
+}
+
+.dashboard-buttons button {
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    border: none; /* This will remove the default button border */
+    padding: 10px 20px; /* This will add some padding to the button */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer; /* This will change the cursor to a hand when hovering over the button */
+}
+
+.dashboard-buttons button:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dashboard-buttons a {
+    text-decoration: none; /* This will remove the underline from the link */
+    color: inherit; /* This will make the link color the same as the button color */
+}
+
+
+#footballBtn, #basketballBtn, #hockeyBtn, #cricketBtn, #tennisBtn {
+    transition: all 0.3s ease-in-out;
+    border-radius: 12px;
+    border: none; /* This will remove the default button border */
+    padding: 10px 20px; /* This will add some padding to the button */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer; /* This will change the cursor to a hand when hovering over the button */
+}
+
+#footballBtn:hover, #basketballBtn:hover, #hockeyBtn:hover, #cricketBtn:hover, #tennisBtn:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#footballBtn a, #basketballBtn a, #hockeyBtn a, #cricketBtn a, #tennisBtn a {
+    text-decoration: none; /* This will remove the underline from the link */
+    color: inherit; /* This will make the link color the same as the button color */
+}
+.footer {
+    background-color: #d3f0d1;
+    padding: 10px 0;
+    text-align: center;
+}
