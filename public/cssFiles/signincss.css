@@ -113,11 +113,11 @@
 
 
 .logo {
-    width: 260px; /* Adjust as needed */
+    width: 250px; /* Adjust as needed */
     height: auto; /* This will maintain the aspect ratio */
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -617px;
+    margin-top: -600px;
     background-color: transparent;
   } 
