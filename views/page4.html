@@ -37,7 +37,7 @@
              
         <section id="add-item">
             <h2 class="centerfont"> Add New Product</h2>
-            <form id="item-form">
+            <form id="addItem-form">
                 <article>
                     <label for="product-name">Product Name:</label>
                     <input type="text" id="product-name" name="Product Name" placeholder="e.g Football" required>
@@ -45,7 +45,7 @@
 
                 <article>
                     <label for="sale-price">Sale Price:</label>
-                    <input type="number" id="sale-price" name="Retail Price" required placeholder="XX $">
+                    <input type="number" id="sale-price" name="Sale Price" required placeholder="XX $">
                 </article>
                
                 <article>
@@ -70,7 +70,7 @@
 
                 <article>
                     <label for="category">Category:</label>
-                    <select id="category" name="Product Category" required>
+                    <select id="pCategory" name="Product Category" required>
                         <option value="others">Select Category</option>
                         <option value="sportsEquipment">Sports Equipment</option>
                         <option value="fitnessEquipment">Fitness Equipment</option>
@@ -80,6 +80,10 @@
                 <article>
                     <label for="product-image">Product Image:</label>
                     <input type="file" id="product-image" name="product-image" accept="image/*">
+                </article>
+                <article>
+                    <label for="sellerID"> Your Designated Seller-ID: </label>
+                    <input type="number" id="sellerID" name="Seller-ID" required placeholder="If SellerID is incorrect, product will not be added">
                 </article>
                 <button type="submit">Add Item</button>
             </form>
@@ -93,7 +97,7 @@
              
         <section id="del-item">
                 <h2 class="centerfont">Remove Item From Store</h2>
-                <form id="delete-form">
+                <form id="deleteItem-form">
                     <article>
                         <label for="item-id">Item ID:</label>
                         <input type="text" id="item-id" name="Item ID" placeholder="CT-XXXX" required>
@@ -172,7 +176,7 @@
         <h2 class="centerfont">Hide Item from Buyers</h2>
     <section id="search-item">
         <h3 class="centerfont">Search Item</h3>
-            <form id="search-form">
+            <form id="search-form_forHide">
             <article>
                 <label for="item-id">Item ID:</label>
                 <input type="text" id="item-id" name="Item ID" placeholder="CT-XXXX" required>

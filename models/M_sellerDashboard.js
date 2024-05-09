@@ -1,13 +1,12 @@
-                               //DASHBOARD
+                           //    DASHBOARD
 
 const myDB = require ('../config/dbconfig.js');
-// Handle seller dashboard details
+//Handle seller dashboard details
 function manageDashboardData(req, res) {
   console.log(req.body);
   const {username,password} = req.body;
   let {userType} = req.body;
   userType === "seller" ? userType = 1 : userType=0; 
-  console.log((userType));
   // Check if username and password are provided
   if (!username || !password || !userType) {
     return res.status(400).send('Email and password are required');
@@ -45,15 +44,50 @@ function manageDashboardData(req, res) {
      res.status(200).json({
       message: 'Login successful!',
       userTypeSignal: user.isSeller
-    }
-     );
-    
-    
+    });
  });
 };
 
+
+
+function getAllSellersID (req,res) {
+  const idToCheck = req.query.sellerID;
+  myDB.getConnection((err, connection) => {
+    if (err) {
+        console.error('Error getting connection:', err);
+        return;
+    }
+});
+  const sqlQuery = 'SELECT * FROM sellers where sellerID = ?';
+  myDB.executeQuery(sqlQuery, idToCheck , (err, result) => {
+    if (err) {
+      console.error('Database error:', err);
+      return res.status(500).send('Database Server error');
+    }
+    if (result.length !== 0) 
+    {
+      return res.status(200).json({
+        message: "Valid"   //signal that sent sellerID is valid
+      })
+    } //found the seller ID in database
+    else
+    {
+      return res.json({
+       message: "Invalid"  //signal that sent sellerID is inValid
+      });
+    }
+  })
+};
+
+
+
+
+
+
+
 module.exports= {
-    manageDashboardData
+    manageDashboardData,
+    getAllSellersID
 };
 
 
