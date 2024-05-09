@@ -1,30 +1,26 @@
-h1 {
+h1, .centralizePara, .centerfont {
     text-align: center;
-    font-size: 2.5em;
     font-family: 'Arial', sans-serif;
-    color: #b68d3b;
-    padding: 20px;
-    border-bottom: 2px solid #baa243;
-    background-color: #f0f0f0;
-    margin-bottom: 20px;
-}
-
-.centralizePara, .centerfont {
-    text-align: center;
-    font-size: 1.5em;
-    font-family: 'Arial', sans-serif;
-    color: #b68d3b;
     padding: 10px;
     background-color: #f0f0f0;
     margin-bottom: 10px;
 }
 
+h1 {
+    font-size: 2.5em;
+    color: #b68d3b;
+    padding: 20px;
+    border-bottom: 2px solid #baa243;
+    margin-bottom: 20px;
+}
+
 .centralizePara {
+    font-size: 1.5em;
+    color: #b68d3b;
     border-bottom: 1px solid #baa243;
 }
 
 .centerfont {
-    text-align: center;
     font-size: 1.2em;
     color: #333;
     margin-bottom: 20px;
@@ -80,13 +76,13 @@ h1 {
     color: white; 
 }
 
-
-
 #add-item input[type="text"],
 #add-item input[type="number"],
 #add-item select,
 #del-item input[type="text"],
-#search-form input[type="text"] {
+#search-form input[type="text"],
+#item-form input,
+#item-form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -172,7 +168,6 @@ legend {
     font-weight: bold;
 }
 
-
 #item-form {
     display: flex;
     flex-direction: column;
@@ -193,33 +188,6 @@ legend {
     margin-bottom: 5px;
 }
 
-#item-form input{
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    width: 100%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-#item-form section {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    width: 100%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-#item-form select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    width: 100%;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-in-out;
-}
-
 #item-form input:focus, #item-form select:focus {
     outline: none;
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
@@ -237,10 +205,9 @@ legend {
     border: 1px solid black;
 }
 
-#item-form input:hover {
+/* #item-form input:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
+} */
 
 #delete-form article {
     margin-bottom: 20px;
@@ -271,15 +238,13 @@ legend {
     display: block;
     margin: 0 auto;
     font-size: 1em;
-        border: 1px solid black;
+    border: 1px solid black;
 }
-
 
 #delete-form input:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     outline: none;
 }
-
 
 #delete-form button, #search-form button {
     display: block;
@@ -289,7 +254,6 @@ legend {
 #delete-form input:hover, #search-form input:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }   
-
 
 #search-form button {
     display: inline-block;
@@ -305,11 +269,30 @@ legend {
     border: 1px solid black;
     margin-left: 100px;
 }
-
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #search-form button:hover {
     color: #fff; /* make the text white when hovered */
 }
+#search-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* This makes the flex items stack vertically */
+    height: 100%; /* This makes the section take up the full height of its parent */
+}
 
+#search-form {
+    text-align: center;
+}
+
+.search-input,
+.search-button {
+    width: 300px; /* Adjust this value to your needs */
+}
 /* Style the footer container */
 .footer {
     background-color: wheat;
@@ -325,3 +308,60 @@ legend {
     font-weight: bold; /* Make text bold */
 }
 
+#discount-button {
+    float: left;
+    margin-right: 10px; /* Adjust the value as needed */
+    border: none;
+    background: none;
+}
+
+#discount-button:hover {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    border-width: 0;
+}
+
+
+#updateItem-form {
+    display: none;
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#updateItem-form article {
+    margin-bottom: 20px;
+}
+
+#updateItem-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#updateItem-form input[type="text"],
+#updateItem-form input[type="number"],
+#updateItem-form select,
+#updateItem-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#updateItem-form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#updateItem-form button:hover {
+    background-color: #0056b3;
+}

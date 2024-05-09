@@ -18,13 +18,23 @@ function toggleDiscountField() {
 
 function toggleDisplayOfItem() {
     var displayItemCheckbox = document.getElementById("display-Item");
-    if (displayDiscountCheckbox.checked) 
-    {
-       //implement functionality to hide the product when checkbox is set i.e set that product style to "block"
-       //also show popup that yes, product hidden
-    } 
+    var product = document.getElementById("product"); // Assuming you have a product element with id "product"
+    if (displayItemCheckbox.checked) {
+        // Hide the product when checkbox is set
+        product.style.display = "none";
+        // Show popup that yes, product hidden
+        alert("Product is hidden");
+    } else {
+        // Show the product when checkbox is not set
+        product.style.display = "block";
+    }
 }
 
 document.getElementById("sellerDashBtn").onclick = function () {
     location.href = "/seller";
 };
+
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    document.getElementById('updateItem-form').style.display = 'block'; // Show the form
+});
