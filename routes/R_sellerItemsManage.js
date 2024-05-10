@@ -4,10 +4,10 @@ const sellerItemsController= require('../controllers/C_sellerItemsManage');
 const sellerItemsDbModel= require('../models/M_sellerItemsManage.js');
 
 
-
 router.get('^/$|itemsManagePage(.html)?', sellerItemsController.getSellerItemsPage);
+router.get('/findProduct', sellerItemsDbModel.findProductFromDb);
 router.post('/addProduct', sellerItemsDbModel.addProductToDb);
-//router.delete('/products/:id',sellerItemsDbModel.deleteProduct);
-//router.put('/products/:id', sellerItemsDbModel.updateProduct);
+router.delete('/deleteProduct',sellerItemsDbModel.deleteProductFromDb);
+router.put('/updateProduct', sellerItemsDbModel.updateProductInDb);
 
 module.exports = router; 

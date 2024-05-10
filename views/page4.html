@@ -99,12 +99,16 @@
                 <h2 class="centerfont">Remove Item From Store</h2>
                 <form id="deleteItem-form">
                     <article>
-                        <label for="item-id">Item ID:</label>
-                        <input type="text" id="item-id" name="Item ID" placeholder="CT-XXXX" required>
+                        <label for="itemID">Item ID:</label>
+                        <input type="number" id="itemID" name="Item ID" placeholder="XX" required>
                     </article>
                     <article>
                         <label for="item-name">Item Name:</label>
                         <input type="text" id="item-name" name="item Name" placeholder="e.g Cricket Bat" required autocomplete="on">
+                    </article>
+                    <article>
+                        <label for="selID">Your Designated Seller ID:</label>
+                        <input type="number" id="selID" name="seller ID" placeholder="Make Sure Its Correct" required >
                     </article>
                     <button type="submit">Delete Item</button>
                 </form>
@@ -120,14 +124,18 @@
             <section id="search-item">
                 <h3 class="centerfont">Search Item</h3>
                     <form id="search-form">
-                    <article>
-                        <label for="itemm-id">Item ID:</label>
-                        <input type="text" id="item-id" name="Item ID" placeholder="CT-XXXX" required>
-                    </article>
-                    <article>
-                        <label for="itemm-name">Item Name:</label>
-                        <input type="text" id="item-name" name="item Name" placeholder="e.g Cricket Bat" required autocomplete="on">
-                    </article>
+                        <article>
+                            <label for="prodID">Item ID:</label>
+                            <input type="number" id="prodID" name="Item ID" placeholder="XX" required>
+                        </article>
+                        <article>
+                            <label for="prodName">Item Name:</label>
+                            <input type="text" id="prodName" name="item Name" placeholder="e.g Cricket Bat" required autocomplete="on">
+                        </article>
+                        <article>
+                            <label for="sel-ID">Your Designated Seller ID:</label>
+                            <input type="number" id="sel-ID" name="seller ID" placeholder="Make Sure Its Correct" required >
+                        </article>
                     <button type="submit">Search</button>
                 </form>
             </section>
@@ -136,36 +144,27 @@
                 <!--After backend DB, the current values of item details, as default, will be in these boxes-->
                 <form id="updateItem-form">
                     <article>
-                        <label for="item-name">Item Name:</label>
-                        <input type="text" id="item-name" name="item Name" placeholder="e.g Cricket Bat" required autocomplete="on">
+                        <label for="nameOfItem">Item Name:</label>
+                        <input type="text" id="nameOfItem" name="Item Name" placeholder="e.g Cricket Bat" required autocomplete="on">
                     </article>
+
                     <article>
-                        <label for="sale-price">Sale Price:</label>
-                        <input type="number" id="sale-price" name="Retail Price" required>
+                        <label for="descOfProduct">Product Description:</label>
+                        <input type="text" id="descOfProduct" name="Product_Description" placeholder="Details About the Product">
+                    </article>
+
+                    <article>
+                        <label for="priceOfSale">Sale Price:</label>
+                        <input type="number" id="priceOfSale" name="Retail Price" value="1" required>
                     </article>
                      
                     <article id="discounted-price-container">
-                        <label for="discounted-price">Discounted Price:</label>
-                        <input type="number" id="discounted-price" name="discounted-price" placeholder="leave empty if no discount">
+                        <label for="priceofDisc">Discounted Price:</label>
+                        <input type="number" id="priceofDisc" name="discounted-price" value="1"
+                        placeholder="leave empty if no discount">
                     </article>
-                    <article>
-                        <label for="category">Category:</label>
-                        <select id="category" name="Product Category" required>
-                            <option value="others">Select Category</option>
-                            <option value="sportsEquipment">Sports Equipment</option>
-                            <option value="fitnessEquipment">Fitness Equipment</option>
-                            <option value="others">Others</option>
-                        </select>
-                    </article>
-                    <article>
-                        <label for="product-image">Product Image:</label>
-                        <input type="file" id="product-image" name="product-image" accept="image/*">
-                    </article>
-                    <button type="submit">Add Item</button>
+                    <button type="submit">Update Product</button>
                 </form>
-                
-                 
-               
             </section>
 </fieldset> 
     

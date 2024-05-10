@@ -50,7 +50,7 @@ function manageDashboardData(req, res) {
 
 
 
-function getAllSellersID (req,res) {
+function checkSellersID (req,res) {
   const idToCheck = req.query.sellerID;
   myDB.getConnection((err, connection) => {
     if (err) {
@@ -64,14 +64,17 @@ function getAllSellersID (req,res) {
       console.error('Database error:', err);
       return res.status(500).send('Database Server error');
     }
+    console.log(result);
     if (result.length !== 0) 
     {
+      console.log("sellerID  found");
       return res.status(200).json({
         message: "Valid"   //signal that sent sellerID is valid
       })
     } //found the seller ID in database
     else
     {
+      console.log("sellerId NOT found");
       return res.json({
        message: "Invalid"  //signal that sent sellerID is inValid
       });
@@ -87,7 +90,7 @@ function getAllSellersID (req,res) {
 
 module.exports= {
     manageDashboardData,
-    getAllSellersID
+    checkSellersID
 };
 
 
