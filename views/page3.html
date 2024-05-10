@@ -1,65 +1,147 @@
+                                   <!-- Product Display Page (SportsEquipment)-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Products</title>
+    <!--- Add your CSS stylesheet link here -->
     <link rel="stylesheet" href="cssFiles/page3.css">
-    <script src="JS_files/page3.js" defer></script>
+     <script src="JS_files/page3.js" defer></script>
 </head>
+
+
 <body>
     <header>
         <div class="logo">
             <img src="images/teinda.png" alt="Website Logo">
         </div>
-    </header>
-    <main>
-        <article class="intro">
-            <h1>SPORTS EQUIPMENT</h1>
-            <button id="cartBtn">
-                <a href="/cart" id="cart-link">
-                    <img src="/images/cart.png" id="cart-logo" alt="My Cart">
-                    <span id="cart-symb-text">Products Cart</span>
-                </a>
-            </button>
-            <p class="centralizePara">Browse Through Our Amazing Collection of Various Sports Equipment</p>
-            <hr>
-            <p class="centralizePara"> Search For Your Favourite Sports With Filters</p>
-        </article>
-        <section class="centralizePara" class="dashboard-buttons">
-            <button id="footballBtn">Football Products</button>
-            <button id="basketballBtn"><a href="#Bball">BasketBall Products</a></button>
-            <button id="hockeyBtn"><a href="#hockSt">Hockey Products</a></button>
-            <button id="cricketBtn"><a href="#cricBat">Cricket Products</a></button>
-            <button id="tennisBtn">Tennis Products</button>
-        </section>
-    </main>
-    <hr>
-    <section id="sports-equipment">
-        <!-- Product articles with images and placeholders for data -->
-        <article id="product-1" class="product">
-            <img src="./images/BasketBall.png" alt="Product Image">
-            <h3 class="product-name">Product Name</h3>
-            <p class="product-description">Product Description</p>
-            <p class="product-price">Price: $0</p>
-            <button class="btn">Add to Cart</button>
-        </article>
-        <article id="product-2" class="product">
-            <img src="./images/cricket_bat.png" alt="Product Image">
-            <h3 class="product-name">Product Name</h3>
-            <p class="product-description">Product Description</p>
-            <p class="product-price">Price: $0</p>
-            <button class="btn">Add to Cart</button>
-        </article>
-        <!-- Add more product articles as needed -->
+    </header> 
+<main>
+    <article class="intro">
+        <h1>SPORTS EQUIPMENT</h1>
+        <button id="cartBtn">
+            <a href="/cart" id="cart-link">
+                <img src="/images/cart.png" id="cart-logo" alt="My Cart">
+                <span id="cart-symb-text">Products Cart</span>
+            </a>
+        </button>
+        
+        <p class= "centralizePara">Browse Through Our Amazing Collection of Various Sports Equipment</p>
+        <hr>
+        <p class= "centralizePara"> Search For Your Favourite Sports With Filters</p>
+    </article>
+    <!-- will probably add JS later to make page dynamically shown only related product when filter applied-->
+    <section class= "centralizePara" class="dashboard-buttons" >
+        <button id="footballBtn"> Football Products </button>
+        <button id="basketballBtn"><a href="#Bball"> BasketBall Products  </a> </button>
+        <button id="hockeyBtn"><a href="#hockSt"> Hockey Products </a> </button>
+        <button id="cricketBtn"><a href="#cricBat"> Cricket Products </a> </button>
+        <button id="tennisBtn"> Tennis Products </button>
     </section>
-    <hr>
-    <footer>
-        <div class="footer">
-            <div class="footer-text">
-                <p>© 2024 Tienda. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+</main>
+<hr>
+    <!-- Sports Equipment Section -->
+<section id="sports-equipment"> 
+    <div class="container">
+        <h2 style="text-align: center;">Equipment</h2>
+                <div class="row">
+        <!-- Product 1: Basketball -->
+        <article id="Bball" class="product">
+            <img src="/images/basketball.png" alt="Basketball" width="400" height="300"  loading="lazy">
+            <h3 id="prodA11"> Basketball</h3>
+            <p  id="prodA12"> A standard size basketball for indoor and outdoor use.</p>
+            <p  id="prodA13"> Normal Price: $22</p>
+            <p  id="prodA14"> Sale Price: $20</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+        <!-- Product 2: Soccer Ball -->
+        <article id="futBall" class="product">
+            <img src="/images/soccer_ball.png" alt="Soccer Ball" width="300" height="300"  loading="lazy">
+            <h3>Soccer Ball</h3>
+            <p>A high-quality soccer ball suitable for all ages.</p>
+            <p>Price: $25</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+        <!-- Product 3: Tennis Racket -->
+        <article id="tenRack"class="product">
+            <img src="./images/tennis_racket.png" apnglt="Tennis Racket" width="500" height="300"  loading="lazy">
+            <h3>Tennis Racket</h3>
+            <p>A professional-grade tennis racket for enhanced performance.</p>
+            <p>Price: $50</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+      
+        <!-- Product 4: Cricket Bat -->
+        <article id="cricBat"class="product">
+            <img src="./images/cricket_bat.png" alt="Cricket Bat" width="400" height="300"  loading="lazy">
+            <h3>Cricket Bat</h3>
+            <p>A high-quality cricket bat for powerful shots.</p>
+            <p>Price: $80</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+        <!-- Product 5: Baseball Bat -->
+        <article id="baseB"class="product">
+            <img src="./images/baseball.png" alt="Baseball Bat" width="400" height="300"  loading="lazy">
+            <h3>Baseball Bat</h3>
+            <p>A durable baseball bat for hitting home runs.</p>
+            <p>Price: $30</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+        <!-- Product 6: Tennis Balls -->
+        <article id="tenBall"class="product">
+            <img src="./images/tennis_ball.png" alt="Tennis Ball" width="350" height="300"  loading="lazy">
+            <h3>Tennis Balls</h3>
+            <p>A pack of 3 high-quality tennis balls.</p>
+            <p>Price: $10</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+        <!-- Product 7: Goalkeeper Gloves -->
+        <article id="golGloves"class="product">
+            <img src="./images/goalkeeper_gloves.png" alt="Goalkeeper Gloves" width="400" height="300"  loading="lazy">
+            <h3>Goalkeeper Gloves</h3>
+            <p>Professional-grade goalkeeper gloves for ultimate protection.</p>
+            <p>Price: $50</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+        <!-- Product 8: Hockey Stick -->
+        <article id="hockSt"class="product">
+            <img src="./images/hockey_stick.png" alt="Hockey Stick" width="300" height="300"  loading="lazy">
+            <h3>Hockey Stick</h3>
+            <p>A premium-quality hockey stick for accurate shots.</p>
+            <p>Price: $70</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+         <!-- Volleyball -->
+         <article id="vBall"class="product">
+            <img src="./images/volleyball.png" alt="Volleyball" width="350" height="300"  loading="lazy">
+            <h3>Volleyball</h3>
+            <p>A high-quality volleyball for indoor and outdoor play.</p>
+            <p>Price: $15</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+        <!-- Table Tennis Racket -->
+        <article id="tbltenrack" class="product">
+            <img src="./images/table_tennis_racket.png" alt="Table Tennis Racket" width="400" height="300"  loading="lazy">
+            <h3>Table Tennis Racket</h3>
+            <p>A high-quality table tennis racket for precise shots.</p>
+            <p>Price: $40</p>
+            <button class="btn">Add to Cart</button>
+        </article>
+
+
+    </div>
+</div>
+</section>
+
+    
+<hr>
+  
+<footer>     
+<div class="footer">
+    <div class="footer-text">
+        <p>© 2024 Tienda. All rights reserved.</p>
+    </div>
+</footer>
 </body>
-</html>
+</html> 
