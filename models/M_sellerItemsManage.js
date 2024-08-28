@@ -3,7 +3,8 @@
 const myDB = require ('../config/dbconfig.js');
 //Handle seller products page details
 function addProductToDb(req, res) {
-  console.log(req.body);
+  //console.log("in func");
+ // console.log(req.body);
   const {productName, description, price, discount, availableQuantity, category, sID} = req.body;
  
   // Check if username and password are provided
@@ -29,7 +30,7 @@ function addProductToDb(req, res) {
     
     if (result.length === 0) //error handling
     {
-      return res.status(401).send('UNKNOWN ERROR');
+      return res.status(401).send('UNKNOWN ERROR in Product Entry');
     }
     console.log(result);
    
